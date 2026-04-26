@@ -165,7 +165,7 @@ ctest --test-dir build --output-on-failure
   <img src="docs/assets/bench/latest.png" alt="Patternia benchmark comparison" width="90%">
 </p>
 
-<p align="center"><em>Mean CPU time across key scenarios — lower is better.</em></p>
+<p align="center"><em>Patternia gap map across key scenarios. Each row is normalized to the fastest implementation in that scenario.</em></p>
 
 See [Performance Notes](https://patternia.tech/performance/) for full reports and methodology.
 

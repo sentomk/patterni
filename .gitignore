@@ -99,6 +99,8 @@ cmake/patternia_dummy.cc
 
 # ===== Python virtual environment =====
 .venv
+.venv-win/
+.tmp/
 
 # Local benchmark staging outputs
 bench/results/
