@@ -3,12 +3,6 @@ name: patternia PR Check (Ubuntu)
 on:
   pull_request:
     branches: [main, dev-main]
-    paths-ignore:
-      - "README.md"
-      - "CONTRIBUTING.md"
-      - "docs/**"
-      - "LICENSE"
-      - ".github/ISSUE_TEMPLATE/**"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
