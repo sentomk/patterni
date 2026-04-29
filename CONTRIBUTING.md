@@ -11,14 +11,43 @@ See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for details.
 
 ## Before Submitting Changes
 
-### 1. Discuss First
+### 1. Branch and Pull Request Workflow
+
+The `main` branch is protected and should remain releasable.
+
+- Do not push directly to `main`
+- Create focused branches for changes:
+  - `feat/<topic>` for new features
+  - `fix/<topic>` for bug fixes
+  - `docs/<topic>` for documentation
+  - `test/<topic>` for test-only changes
+  - `chore/<topic>` for maintenance
+- Open a pull request into `main`
+- Keep each pull request focused on one goal
+- Ensure required CI passes before merging
+
+For concurrent local work, prefer `git worktree` over repeatedly stashing and
+switching branches:
+
+```bash
+git worktree add ../patternia-feat-example -b feat/example
+git worktree add ../patternia-fix-example -b fix/example
+git worktree list
+git worktree remove ../patternia-feat-example
+```
+
+Pull request titles should follow the same style as commit subjects, such as
+`feat(pattern): add case-insensitive string matching` or
+`fix(eval): correct match_result type inference`.
+
+### 2. Discuss First
 
 For non-trivial changes (new features, API changes, or behavior modifications),  
 please open an **Issue** or **Discussion** before submitting a pull request.
 
 This helps ensure alignment with the project’s design goals.
 
-### 2. Code Style and Design Principles
+### 3. Code Style and Design Principles
 
 Patternia is a design-focused C++ library. Please ensure that contributions adhere to the following principles:
 
@@ -27,7 +56,7 @@ Patternia is a design-focused C++ library. Please ensure that contributions adhe
 - **Zero-overhead abstractions**
 - Maintain consistency with existing DSL and API design
 
-### 3. Tests Required
+### 4. Tests Required
 
 All logic changes must be accompanied by appropriate tests.
 
@@ -35,13 +64,13 @@ All logic changes must be accompanied by appropriate tests.
 - Update existing tests when modifying behavior
 - Ensure all tests pass before submitting
 
-### 4. Comment Style
+### 5. Comment Style
 
 Follow the  
 **[Google C++ Style Guide – Comment Style](https://google.github.io/styleguide/cppguide.html#Comment_Style)**  
 for documentation comments.
 
-### 5. Commit Style
+### 6. Commit Style
 
 Use clear, conventional commit messages with a structured body.
 
