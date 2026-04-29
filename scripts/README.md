@@ -46,6 +46,32 @@ Outputs:
 - `build/bench/single/single_impl.md`
 - `build/bench/single/single_impl.csv`
 
+The PNG is a Patternia-focused gap map:
+
+- each scenario is normalized to its fastest implementation (`1.00x`)
+- the Patternia result is the diamond marker
+- grey dots are alternative implementations
+- rows are sorted by the largest Patternia gap first
+
+The CSV includes filter-ready columns:
+
+- `is_patternia`
+- `fastest_impl`
+- `impl_vs_fastest_pct`
+- `impl_vs_patternia_pct`
+- `patternia_rank`
+- `patternia_vs_fastest_pct`
+- `patternia_status`
+
+You can also rebuild a report from an existing CSV:
+
+```powershell
+py -3 scripts/bench_single_report.py `
+  --input docs/assets/bench/latest.csv `
+  --outdir docs/assets/bench `
+  --prefix latest
+```
+
 ## Optional args
 
 ```powershell
